@@ -1,0 +1,7 @@
+# ninja log v5
+5	839	6746840915056873	CMakeFiles/Proyecto_final.dir/main.cpp.obj	6b5461e6f7d7ae4c
+840	1088	6746840917430769	Proyecto_final.exe	85c6d0905cb1e280
+7	140	6746839294396260	CMakeFiles/Proyecto_final.dir/Menus/menus.cpp.obj	7ef097147f8b7dac
+43	298	6746856760702332	CMakeFiles/Proyecto_final.dir/Menus/menus.cpp.obj	a29f1639096bc24d
+11	2221	6746856780328816	CMakeFiles/Proyecto_final.dir/main.cpp.obj	e8a4343a71f97f0b
+2221	2383	6746856781929640	Proyecto_final.exe	85c6d0905cb1e280
