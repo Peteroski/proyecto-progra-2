@@ -4,6 +4,9 @@
 #pragma once
 
 #include <iostream>
-#include "Menus.h"
+#include "Votos.h"
+#include "Administrador.h"
+#include "Elector.h"
+#include "Menus/main.h"
 
 // TODO: Reference additional headers your program requires here.
