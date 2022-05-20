@@ -88,7 +88,11 @@
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				1
+				1,
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -103,6 +107,26 @@
 		{
 			"backtrace" : 1,
 			"path" : "ProyectoFinal/ProyectoFinal.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ProyectoFinal/Menus.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ProyectoFinal/Entidades.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ProyectoFinal/Elector.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"path" : "ProyectoFinal/Votos.h",
 			"sourceGroupIndex" : 1
 		}
 	],

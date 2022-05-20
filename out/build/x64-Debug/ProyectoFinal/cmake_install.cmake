@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/ProyectoFinal
+# Install script for directory: C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/ProyectoFinal
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

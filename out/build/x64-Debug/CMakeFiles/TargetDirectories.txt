@@ -1,5 +1,5 @@
-C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
-C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/build/x64-Debug/ProyectoFinal/CMakeFiles/ProyectoFinal.dir
-C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/build/x64-Debug/ProyectoFinal/CMakeFiles/edit_cache.dir
-C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/build/x64-Debug/ProyectoFinal/CMakeFiles/rebuild_cache.dir
+C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/build/x64-Debug/ProyectoFinal/CMakeFiles/ProyectoFinal.dir
+C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/build/x64-Debug/ProyectoFinal/CMakeFiles/edit_cache.dir
+C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/build/x64-Debug/ProyectoFinal/CMakeFiles/rebuild_cache.dir

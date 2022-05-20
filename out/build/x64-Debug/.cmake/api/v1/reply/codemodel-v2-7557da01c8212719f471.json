@@ -53,7 +53,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "ProyectoFinal::@193dfad540aa8819f23b",
-					"jsonFile" : "target-ProyectoFinal-Debug-31c44f1c85cb46a7fd9e.json",
+					"jsonFile" : "target-ProyectoFinal-Debug-6358d720b5f692f83f40.json",
 					"name" : "ProyectoFinal",
 					"projectIndex" : 0
 				}
@@ -63,8 +63,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal/out/build/x64-Debug",
-		"source" : "C:/Users/andre/CLionProjects/Proyecto final/ProyectoFinal"
+		"build" : "C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2/out/build/x64-Debug",
+		"source" : "C:/Users/andre/CLionProjects/Proyecto final/proyecto-progra-2"
 	},
 	"version" : 
 	{
