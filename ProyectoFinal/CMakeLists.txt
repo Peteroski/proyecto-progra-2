@@ -4,6 +4,6 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (ProyectoFinal "ProyectoFinal.cpp" "ProyectoFinal.h" "Menus.h" "Entidades.h" "Elector.h" "Votos.h")
+add_executable (ProyectoFinal "ProyectoFinal.cpp" "ProyectoFinal.h" "Menus.h" "Entidades.h" "Elector.h" "Votos.h" "Administrador.h")
 
 # TODO: Add tests and install targets if needed.

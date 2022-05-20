@@ -3,6 +3,9 @@
 
 using namespace std;
 
+int eleccionHabilitada = false;
+int segundaVuelta = false;
+
 struct regiones
 {
     char nombre[100];
@@ -33,26 +36,13 @@ struct
     struct region;
 } votante;
 
-
-// Registra candidatos y los guarda en un archivo (.txt)
-void registrarCandidato()
-{
-
-}
-// Registra partidos políticos y los guarda en un archivo (.txt)
-void registrarPartido()
-{
-
-}
-// Registra regiones y las guarda en un archivo (.txt)
-void registrarRegion()
-{
-
-}
-
 int main()
 {
     menuPrincipal();
-
+    /*nt n;
+    cout << "N: ";
+    cin >> n;
+    cout << par(n) << endl;
+    cout << impar(n) << endl;*/
     return 0;
 }
