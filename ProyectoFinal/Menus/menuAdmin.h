@@ -43,7 +43,7 @@ void FuncionesAdmin()
 
     do
     {
-        system("clear");
+        //system("cls");
 
         /* Cuando se elije Habilitar elección, se van a deshabilitar algunas opciones del menú*/
 
@@ -71,7 +71,8 @@ void FuncionesAdmin()
             EliminarElector();
             break;
         case 4:
-            RegistrarCandidato();
+            registrarCandidatos();
+            //getCandidatos();
             break;
         case 5:
             RegistrarRegion();
