@@ -1,3 +1,9 @@
+// Prototipo
+
+void FuncionesAdmin();
+
+// Inicio
+
 void Administrador()
 {
     int op;
