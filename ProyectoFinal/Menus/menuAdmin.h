@@ -42,7 +42,7 @@ void menuAdmin()
 
     do
     {
-        system("cls");
+        //system("cls");
 
         /* Cuando se elije la opción Habilitar elección, se van a deshabilitar algunas opciones del menú*/
 
@@ -73,7 +73,8 @@ void menuAdmin()
             eliminarElector();
             break;
         case 4:
-            registrarCandidato();
+            //registrarCandidato();
+            verCandidatos();
             break;
         case 5:
             registrarRegion();

@@ -1,9 +1,40 @@
+#include <string>
+#include <iostream>
+#include <stdlib.h>
+#include <fstream>
+
+using namespace std;
+
+string filePath(string fileName);
+
 void registrarElector()
 {
+	ofstream archivo;
+	string nombre = filePath("electoreads.txt");
+
+	// char texto [20];
+	string texto;
+
+	cout << "Texto: ";
+	getline(cin, texto);
+
+	// 
+	archivo.open(nombre, ios::app);
+
+	if (archivo.fail())
+	{
+		cout << "No se pudo abrir el archivo";
+		exit(1);
+	}
+
+	archivo << texto << "\n";
+	archivo.close();
+
+	// Leer archivo
+	
 	system("cls");
 	printf("Elector registrado...\n");
-	system("pause");
-	
+	system("pause");	
 }
 
 void editarElector()
@@ -23,7 +54,7 @@ void eliminarElector()
 }
 
 // Registra candidatos y los guarda en un archivo (.txt)
-void registrarCandidato()
+void registrarCandidatos()
 {
 	system("cls");
 	printf("Candidato registrado...\n");
