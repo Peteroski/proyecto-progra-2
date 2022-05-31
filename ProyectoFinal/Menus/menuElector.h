@@ -61,9 +61,9 @@ void menuElegirCandidato()
             cerrarMenu = true;
 
             if (opcion == 4) // Opción de voto en blanco
-                guardarVoto(opcion, true);
+                guardarVoto(opcion, true, "");
             else
-                guardarVoto(opcion, false);
+                guardarVoto(opcion, false, "");
 
             // Mensaje de éxito
             system("cls");
