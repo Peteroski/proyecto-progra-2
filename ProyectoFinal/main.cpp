@@ -28,6 +28,9 @@ struct Elector
 
 int main()
 {
+    // Tener candidatos activos
+    //registrarCandidatos();
+
     menuPrincipal();
     return 0;
 }

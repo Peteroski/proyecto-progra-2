@@ -5,70 +5,72 @@
 
 using namespace std;
 
+// Firmas de funciones
+void getVotos();
+
 string filePath(string fileName);
 
-struct Persona
-{
-    int cedula;
-    string nombre;
-    string clave;
-};
+int votos[5]; // Este array se llena con el archivo guardado en Archivos/candidatos/votos.txt
+
+bool candidatosSeteados = false;
 
 struct Candidato
 {
-    Persona persona;
-    string partido;
-    int votos;
-} candidato1, candidato2, candidato3, candidato4, candidato5;
+    string nombre = "";
+    string partido = "";
+    int votos = 0;
+} candidatos[5];
 
-void registrarCandidato()
+void setCandidatos()
 {
-    ofstream archivo;
-    // Candidato candidato1, candidato2, candidato3, candidato4, candidato5;
+    if (!candidatosSeteados)
+    {
+        // Obtener votos
+        getVotos();
 
-    candidato1 = { { 12345, "Gustavo Petro", "petroski" }, "Pacto historico", 0};
-    candidato2 = { { 23456, "Sergio Fajardo", "fajardoski" }, "Centro esperanza", 0};
-    candidato3 = { { 34567, "Federico Guitierrez", "elnea123" }, "Equipo por Colombia", 0};
-    candidato4 = { { 45678, "Rodolfo Hernandez", "elinge123" }, "Liga de gobernantes anticorrupción", 0};
-    candidato5 = { { 0, "Voto en blanco", "" }, "", 0};
+        candidatos[0] = { "Gustavo Petro", "Pacto historico", votos[0] };
+        candidatos[1] = { "Sergio Fajardo", "Centro esperanza", votos[1] };
+        candidatos[2] = { "Federico Guitierrez", "Equipo por Colombia", votos[2] };
+        candidatos[3] = { "Rodolfo Hernandez", "Liga de gobernantes anticorrupción", votos[3] };
+        candidatos[4] = { "Voto en blanco", "", votos[4] };
 
-    // Crear archivo con candidatos
-    archivo.open(filePath("candidatos.txt"), ios::out);
+        cout << candidatosSeteados << endl << endl;
+        candidatosSeteados = true;
+    }
+}
+
+void getVotos()
+{
+    ifstream archivo;
+    archivo.open(filePath("candidatos/votos.txt"), ios::out);
     
-    archivo << candidato1.persona.cedula;
-    archivo << candidato1.persona.nombre;
-    archivo << candidato1.persona.clave;
-    archivo << candidato1.partido;
-    archivo << candidato1.votos;
-    archivo << endl;
+    string voto; // Variable que almacena el texto de la línea iterada en el txt
+    int i = 0; // Iterador para guardar votos en array votos[]
 
-    archivo << candidato2.persona.cedula;
-    archivo << candidato2.persona.nombre;
-    archivo << candidato2.persona.clave;
-    archivo << candidato2.partido;
-    archivo << candidato2.votos;
-    archivo << endl;
+    while (!archivo.eof())
+    {
+        getline(archivo, voto);
+        votos[i] = stoi(voto);
+        i++;
+    }
 
-    archivo << candidato3.persona.cedula;
-    archivo << candidato3.persona.nombre;
-    archivo << candidato3.persona.clave;
-    archivo << candidato3.partido;
-    archivo << candidato3.votos;
-    archivo << endl;
+    archivo.close();
+}
 
-    archivo << candidato4.persona.cedula;
-    archivo << candidato4.persona.nombre;
-    archivo << candidato4.persona.clave;
-    archivo << candidato4.partido;
-    archivo << candidato4.votos;
-    archivo << endl;
+void registrarCandidatos()
+{
+    setCandidatos();
+    ofstream archivo;
+    
+    // Crear archivo con candidatos
+    archivo.open(filePath("candidatos/listado.txt"), ios::out);
 
-    archivo << candidato5.persona.cedula;
-    archivo << candidato5.persona.nombre;
-    archivo << candidato5.persona.clave;
-    archivo << candidato5.partido;
-    archivo << candidato5.votos;
-
+    for (int i = 0; i < 5; i++)
+    {
+        archivo << candidatos[i].nombre << ";";
+        archivo << candidatos[i].partido << ";";
+        archivo << candidatos[i].votos << endl;
+    }
 
     archivo.close();
 }
@@ -84,7 +86,10 @@ void verCandidatos()
         while (!archivo.eof())
         {
             getline(archivo, texto);
-            cout << texto;
+
+            // Setear candidatos
+
+            cout << texto << endl << endl;
         }
     }
     archivo.close();

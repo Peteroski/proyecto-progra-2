@@ -73,8 +73,8 @@ void menuAdmin()
             eliminarElector();
             break;
         case 4:
-            //registrarCandidato();
-            verCandidatos();
+            registrarCandidatos();
+            //getCandidatos();
             break;
         case 5:
             registrarRegion();

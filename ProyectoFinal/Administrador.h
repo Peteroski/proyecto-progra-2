@@ -54,7 +54,7 @@ void eliminarElector()
 }
 
 // Registra candidatos y los guarda en un archivo (.txt)
-void registrarCandidatos()
+void registrarCandid()
 {
 	system("cls");
 	printf("Candidato registrado...\n");
