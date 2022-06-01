@@ -1,41 +1,51 @@
 #include <iostream>
-
-#include "menuElector.h"
-#include "menuAdmin.h"
-#include "menuReportes.h"
+#include <stdlib.h>
+#include <fstream>
+#include <string.h>
+#include <ctime>
+#include <conio.h>
 
 using namespace std;
 
-void menuPrincipal()
+void TipoUsser();
+
+int main()
 {
-    int opcion = 0;
-
-    do
-    {
-        system("cls");
-        printf("Sistema de votación electrónica\n"
-            "----------------------------\n"
-            "1. Elector\n"
-            "2. Administrador\n"
-            "3. Resultados y estadísticas\n"
-            "0. Salir\n"
-            "----------------------------\n\n"
-            "Seleccione una opción: "
-        );
-        cin >> opcion;
-
-        switch (opcion)
-        {
-        case 1:
-            loginElector();
-        break;
-        case 2:
-            loginAdmin();
-        break;
-        case 3:
-            menuReportes();
-        break;
-        }
-    } while (opcion != 0);
+    admin1.cedula=1091272404;
+    admin2.cedula=1088037390;
+    admin1.pass=admin1.cedula/1000000;
+    admin2.pass=admin2.cedula/1000000;
+    TipoUsser();
+    return 0;
 }
 
+void TipoUsser()
+{
+    int op;
+
+    system("clear");
+    
+    cout<<"TIPO DE USUARIO\n"
+    "----------------------------\n"
+    "1- Elector\n"
+    "2- Administrador\n"
+    "3- Consultante\n"
+    "0- Salir\n"
+    "----------------------------\n"
+    "Seleccione una opciÃ³n: ";cin>>op;
+    
+    switch(op){
+        case 1:
+        Elector();
+        break;
+        case 2:
+        Administrador();
+        break;
+        case 3:
+        Consultas();
+        break;
+        case 0:
+        exit(0);
+        break;
+    }
+}
