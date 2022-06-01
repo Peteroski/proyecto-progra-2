@@ -1,92 +1,91 @@
-// Firmas
-void menuAdmin();
+// Prototipo
 
-// Flujo usuario administrador
-void loginAdmin()
+void FuncionesAdmin();
+
+// Inicio
+
+void Administrador()
 {
-    int opcion = 1;
-    int cedula;
-    int clave;
-    // Bandera para indicar que el ingreso fue exitoso
-    bool ingresoExitoso = true;
-
-    system("cls");
-    printf("Login administrador\n"
-        "----------------------------\n"
-        "Ingrese cédula:\n"
-        "----------------------------\n"
-    );
-    fflush(stdout);
-    cin >> cedula;
-
-    system("cls");
-    printf("Login administrador\n"
-        "----------------------------\n"
-        "Ingrese clave:\n"
-        "----------------------------\n"
-    );
-    fflush(stdout);
-    cin >> clave;
-
-    // Ingreso exitoso
-    if (ingresoExitoso)
-    {
-        opcion = 0; // Actualizar este valor para que, una vez hecho el flujo se devuelva al menú anterior
-        menuAdmin();
-    }
+    int op;
+    
+    system("clear");
+    
+    cout<<"ADMINISTRADOR\n"
+    "----------------------------\n"
+    "1- Ingresar\n"
+    "0- Salir\n"
+    "9- AtrÃ¡s\n"
+    "----------------------------\n"
+    "Seleccione una opciÃ³n: ";cin>>op;
+    
+    if(op==1){
+        system("clear");
+        
+        int cd,pw;
+        
+        cout<<"Digite su cÃ©dula: ";cin>>cd;
+        cout<<"Digite su clave: ";cin>>pw;
+        
+        if((cd==admin1.cedula && pw==admin1.pass) || (cd==admin2.cedula && pw==admin2.pass)) FuncionesAdmin();
+        else{
+            cout<<"Error. Usuario y/o contraseÃ±a incorrectos.\n\n";
+            delay(3);
+            TipoUsser();
+        }
+    }else if(op==9) TipoUsser();
+    else if(op==0) exit(0);
+    else Administrador();
 }
 
-void menuAdmin()
+void FuncionesAdmin()
 {
-    int opcion = 0;
+    int op=0;
 
     do
     {
         //system("cls");
+        system("clear");
 
-        /* Cuando se elije la opción Habilitar elección, se van a deshabilitar algunas opciones del menú*/
+        /* Cuando se elije Habilitar elecciÃ³n, se van a deshabilitar algunas opciones del menÃº*/
 
-        printf("Menú Administrador\n"
+        cout<<"MenÃº Administrador\n"
             "----------------------------\n"
             "1. Registrar elector\n"
             "2. Editar elector\n"
-            "3. Eliminar elector (temporal hasta el día de votación)\n"
-            "4. Registrar candidato (temporal hasta el día de votación)\n"
-            "5. Registrar región (temporal hasta el día de votación)\n"
-            "8. Habilitar elección\n"
-            "9. Finalizar elección\n"
+            "3. Eliminar elector (temporal hasta el dÃ­a de votaciÃ³n)\n"
+            "4. Registrar candidato (temporal hasta el dÃ­a de votaciÃ³n)\n"
+            "5. Registrar regiÃ³n (temporal hasta el dÃ­a de votaciÃ³n)\n"
+            "8. Habilitar elecciÃ³n\n"
+            "9. Finalizar elecciÃ³n\n"
             "0. Volver\n"
-            "----------------------------\n\n"
-            "Seleccione una opción: "
-        );
-        cin >> opcion;
+            "----------------------------\n"
+            "Seleccione una opciÃ³n: ";cin>>op;
 
-        switch (opcion)
-        {
+        switch(op){
         case 1:
-            registrarElector();
+            RegistrarElector();
             break;
         case 2:
-            editarElector();
+            EditarElector();
             break;
         case 3:
-            eliminarElector();
+            EliminarElector();
             break;
         case 4:
             registrarCandidatos();
             //getCandidatos();
             break;
         case 5:
-            registrarRegion();
+            RegistrarRegion();
             break;
         case 8:
-            iniciarEleccion();
-            opcion = 0;
+            IniciarEleccion();
+            op=0;
             break;
         case 9:
-            finalizarEleccion();
-            opcion = 0;
+            FinalizarEleccion();
+            op=0;
             break;
         }
-    } while (opcion != 0);
+    } while (op!=0);
 }
