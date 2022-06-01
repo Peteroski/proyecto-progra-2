@@ -1,0 +1,6 @@
+.DS_store
+*.txt
+.env
+.sass-cache
+./out
+.\out
